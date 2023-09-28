@@ -11,7 +11,11 @@ public abstract class ProfessionnelSanté {
     public ProfessionnelSanté(int id, String nom, String prenom, String dateNaissance, String tel, String email, String shift) {
     }
 
+    public ProfessionnelSanté(int medecinId, String medecinNom, String medecinPrenom, String medecinDateNaissance, String medecinTel, String medecinShift, String medecinEmail, String medecinSpecialite) {
+    }
+
     public ProfessionnelSanté(int id, String nom, String prenom, String shift) {
+
     }
 
 
@@ -62,19 +66,10 @@ public abstract class ProfessionnelSanté {
         private String  specialite ;
 
 
-        public Medecin(int id,  String nom , String prenom , String DateNaissance , String tel
-        , String email , String Shift  , String specialite ) {
-
-            super(id , nom , prenom , DateNaissance , tel , email , Shift );
+        public Medecin(int medecinId, String medecinNom, String medecinPrenom, String medecinDateNaissance, String medecinTel, String medecinShift, String medecinEmail, String medecinpecialite) {
+            super(medecinId, medecinNom, medecinPrenom, medecinDateNaissance, medecinTel , medecinShift, medecinEmail);
             this.specialite = specialite ;
-
         }
-
-        public Medecin(int id,  String nom , String prenom ,String Shift , String specialite  ){
-            super(id , nom , prenom , Shift );
-            this.specialite = specialite ;
-
-     }
 
         public String getSpecialite() {
             return specialite;
@@ -112,6 +107,9 @@ public abstract class ProfessionnelSanté {
 
 
         }
+
+
+
         public String getService() {
             return service;
         }
@@ -126,7 +124,39 @@ public abstract class ProfessionnelSanté {
             System.out.println("Téléphone : " + tel);
             System.out.println("Email : " + email);
             System.out.println("Shift : " + shift );
-            System.out.println("Specialite : " +service);
+            System.out.println("Service : " +service);
+
+        }
+    }
+    public static class stagiere extends ProfessionnelSanté {
+
+
+        private String  service ;
+
+
+        public stagiere(int id,  String nom , String prenom , String DateNaissance , String tel
+                , String email , String Shift  , String service ) {
+
+            super(id , nom , prenom , DateNaissance , tel , email , Shift );
+            this.service = service;
+
+        }
+
+        public String getService() {
+            return service;
+        }
+
+
+        @Override
+        public void afficher() {
+            System.out.println("ID : " + id);
+            System.out.println("Nom : " + nom);
+            System.out.println("Prénom : " + prenom);
+            System.out.println("Date de naissance : " + dateNaissance);
+            System.out.println("Téléphone : " + tel);
+            System.out.println("Email : " + email);
+            System.out.println("Shift : " + shift );
+            System.out.println("Service : " +service);
 
         }
     }
@@ -144,11 +174,6 @@ public abstract class ProfessionnelSanté {
 
         }
 
-        public secretaireMedicale(int id,  String nom , String prenom ,String Shift   ){
-            super(id , nom , prenom , Shift );
-
-
-        }
         public String getService() {
             return service;
         }
@@ -163,8 +188,43 @@ public abstract class ProfessionnelSanté {
             System.out.println("Téléphone : " + tel);
             System.out.println("Email : " + email);
             System.out.println("Shift : " + shift );
-            System.out.println("Specialite : " +service);
+            System.out.println("Service : " +service);
 
         }
     }
+    public static class alternant extends ProfessionnelSanté {
+
+
+        private String  service ;
+
+
+        public alternant(int id,  String nom , String prenom , String DateNaissance , String tel
+                , String email , String Shift  , String service ) {
+
+            super(id , nom , prenom , DateNaissance , tel , email , Shift );
+            this.service = service;
+
+        }
+
+        public String getService() {
+            return service;
+        }
+
+
+        @Override
+        public void afficher() {
+            System.out.println("ID : " + id);
+            System.out.println("Nom : " + nom);
+            System.out.println("Prénom : " + prenom);
+            System.out.println("Date de naissance : " + dateNaissance);
+            System.out.println("Téléphone : " + tel);
+            System.out.println("Email : " + email);
+            System.out.println("Shift : " + shift );
+            System.out.println("Service : " +service);
+
+        }
 }
+}
+
+
+
