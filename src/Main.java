@@ -14,6 +14,9 @@ public class Main {
         while (true) {
             System.out.println("Menu Principal :");
             System.out.println("1.Ajouter un professionel de santé:");
+            System.out.println("2.afficher un professionel de santé:");
+            System.out.println("2.modifierun professionel de santé:");
+
             System.out.println(". Quitter");
             System.out.print("Choix : ");
             int choixPrincipal = scanner.nextInt();
@@ -146,8 +149,12 @@ public class Main {
 
                             System.out.println("Alternant ajouté avec succès.");
                             break ;
-
+                        default:
+                            System.out.println("Choix invalide.");
+                            break;
+                            
                     }
+
 
             }
             }

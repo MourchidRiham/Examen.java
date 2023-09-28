@@ -33,6 +33,9 @@ public abstract class ProfessionnelSanté {
     public int getId() {
         return id;
     }
+    public int settId() {
+        return id;
+    }
 
     public String getEmail() {
         return email;
@@ -56,7 +59,15 @@ public abstract class ProfessionnelSanté {
     }
     public void setShift(String nouveauShift) {
 }
+
     public void afficher() {
+        System.out.println("ID : " + id);
+        System.out.println("Nom : " + nom);
+        System.out.println("Prénom : " + prenom);
+        System.out.println("Date de naissance : " + dateNaissance);
+        System.out.println("Téléphone : " + tel);
+        System.out.println("Email : " + email);
+        System.out.println("Shift : " + shift);
 
     }
 
